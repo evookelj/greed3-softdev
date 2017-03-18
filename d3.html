@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <title> D3 Intro </title>
+    <style>
+      .chart div {
+      font: 10px;
+      background-color: steelblue;
+      text-align: right;
+      padding: 3px;
+      margin: 1px;
+      color: white;
+      }
+    </style>
+    
+  </head>
+
+  <body>
+    <h2> Static Chart </h2>
+    <div class="chart">
+      <div style="width: 40px;">4</div>
+      <div style="width: 80px;">8</div>
+      <div style="width: 150px;">15</div>
+      <div style="width: 230px;">23</div>
+      <div style="width: 420px;">42</div>
+    </div>
+
+    <h2>Dynamic Chart</h2>
+    <div class="chart" id ="dynamic">
+    </div>
+
+    <script>
+      var dyn = d3.select("dynamic");
+      var info = [4,8,15,16,23,42];
+    </script>
+  </body>
+  
+</html>
