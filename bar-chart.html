@@ -23,6 +23,10 @@
       margin: 1px;
       color: white;
       }
+
+      td {
+        border: 1px solid black;
+      }
     </style>
   </head>
 
@@ -31,18 +35,26 @@
     <table>
       <tr>
         <td>Topics</td>
-        <td>2014</td>
-        <td>2017</td>
+        <td>2009</td>
+        <td>2013</td>
       </tr>
       <tr>
-        <td>
-          <p>
-          Total Surplus/Deficit as % of GDP: <br>
-          Total Surplus/Deficit: <br>
-          </p>
-        </td>
+        <td>Total Surplus/Deficit (trillions)</td>
+        <td>-1.41</td>
+        <td>-0.637</td>
       </tr>
       <tr>
+        <td>Total GDP (trillions)</td>
+        <td>14.4</td>
+        <td>15.5</td>
+      </tr>
+      <tr>
+        <td>Surplus/Deficit as % of GDP</td>
+        <td>-9.8 %</td>
+        <td>-4.1 %</td>
+      </tr>
+      <tr>
+        <td>Graphified</td>
         <td>
           <div class="yearone" id="dynamic"></div>
         </td>
@@ -54,10 +66,10 @@
     
     <script>
       var dyn = d3.select("#dynamic");
-      var info = [2.8, 8, 15, 16, 23, 42];
+      var info = [1.41,14.4,9.8];
 
       var mite = d3.select("#dynamite");
-      var stats = [2.6, 8, 15, 16, 23, 42];
+      var stats = [0.637,15.5,4.1];
 
       var makeBars = function() {
       
@@ -66,7 +78,7 @@
       .enter()
       .append("div")
       .style("width", function(d) {
-      return d*10 + "px";
+      return d*30 + "px";
       })
       .text( function(d) {
       return d;
@@ -77,7 +89,7 @@
       .enter()
       .append("div")
       .style("width", function(d) {
-      return d*10 + "px";
+      return d*30 + "px";
       })
       .text( function(d) {
       return d;
