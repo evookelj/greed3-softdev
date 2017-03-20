@@ -36,46 +36,46 @@
   </head>
 
   <body>
-    <h1> <b style="color:steelblue">2009</b> vs. <b style="color:pink"> 2013 </b></h1>
+    <h1> <b style="color:steelblue">1998</b> vs. <b style="color:pink"> 2001 </b></h1>
     <table id="nums">
       <tr>
         <td id="bold">Topics</td>
-        <td id="bold">2009</td>
-        <td id="bold">2013</td>
+        <td id="bold">1998</td>
+        <td id="bold">2001</td>
       </tr>
       <tr>
         <td id="bold">Total Surplus/Deficit (trillions)</td>
-        <td>-1.41</td>
-        <td>-0.637</td>
+        <td>0.879</td>
+        <td>1.54</td>
       </tr>
       <tr>
         <td id="bold">Total GDP (trillions)</td>
-        <td>14.4</td>
-        <td>15.5</td>
+        <td>11.4</td>
+        <td>12.7</td>
       </tr>
       <tr>
         <td id="bold">Surplus/Deficit as % of GDP</td>
-        <td>-9.8 %</td>
-        <td>-4.1 %</td>
+        <td>0.8 %</td>
+        <td>1.2 %</td>
       </tr>
     </table>
     <h1>Graphified!</h1>
     <table>
     <tr>
-      <td>2009</td>
+      <td>1998</td>
       <td><div class="yearone" id="dynamic"></div></td>
     </tr>
     <tr>
-      <td>2013</td>
+      <td>2001</td>
       <td><div class="yeartwo" id="dynamite"></div></td>
     </tr>
     
     <script>
       var dyn = d3.select("#dynamic");
-      var info = [1.41,14.4,9.8];
+      var info = [.879,11.4,0.8];
 
       var mite = d3.select("#dynamite");
-      var stats = [.637,15.5,4.1];
+      var stats = [1.54,12.7,1.2];
 
       var makeBars = function() {
       
