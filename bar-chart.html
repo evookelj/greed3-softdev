@@ -77,45 +77,36 @@
       var mite = d3.select("#dynamite");
       var stats = [1.54,12.7,1.2];
 
-      var makeBars = function() {
+      var makeBars = function(scale) {
       
-      dyn.selectAll("div")
-      .data(info)
-      .enter()
-      .append("div")
-      .style("width", function(d) {
-      return d*30 + "px";
-      })
-      .text( function(d) {
-      return d;
-      });
+        dyn.selectAll("div")
+          .data(info)
+          .enter()
+          .append("div")
+          .transition()
+          .duration(2000)
+          .style("width", function(d) {
+          return d*scale + "px";
+          })
+          .text( function(d) {
+          return d;
+          });
 
-      mite.selectAll("div")
-      .data(stats)
-      .enter()
-      .append("div")
-      .style("width", function(d) {
-      return d*30 + "px";
-      })
-      .text( function(d) {
-      return d;
-      });
-      
+        mite.selectAll("div")
+          .data(stats)
+          .enter()
+          .append("div")
+          .transition()
+          .duration(2000)
+          .style("width", function(d) {
+          return d*scale + "px";
+          })
+          .text( function(d) {
+          return d;
+          });
       };
 
-      var transitionTest = function( scale ) {
-
-      dyn.selectAll("div")
-      .data(info)
-      .transition()
-      .duration(2000)
-      .style("width", function(d) {
-      return d * scale + "px";
-      });
-      };
-
-      makeBars();
-      transitionTest();
+      makeBars(50);
     </script>
     
   </body>
